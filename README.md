@@ -1,1 +1,1 @@
-SASS exercises.
+SCSS exercises.
