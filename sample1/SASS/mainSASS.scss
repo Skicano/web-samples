@@ -1,0 +1,19 @@
+@import "variable";
+@import "mixins";
+@import "navigacija";        
+@import "rounded";
+@import "footer";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    max-width: $var2;
+    margin: auto;
+}
+
+body{
+    background-color: blue;
+    background-size: cover;
+}

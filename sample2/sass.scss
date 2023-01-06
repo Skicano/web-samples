@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Playfair+Display:ital@1&family=Sevillana&display=swap');
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul{
+    margin: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 28px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 16px;
+}
+p{
+    font-size: 24px;
+}
+
+body{
+    font-family: 'Playfair Display', bold;
+}
+
+$f-bold: 500;
+$f-light: 300;
+
+$c-green: #336600;
+
+
+.navigation{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: yellow;
+    
+    > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 50px;
+    }
+    
+    h1{
+        font-size: 24px;
+        font-family: "Sevillana";
+        font-weight: $f-bold;
+        a{
+            transition: all .2s;
+            color: darken($c-green, 15%);
+            &:hover{
+                color: darken($c-green, 5%);
+            }
+        }
+    }
+    
+    ul{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        
+        li{
+            margin-left: 15px;
+            a{
+                transition: all .2s;
+                font-weight: $f-bold;
+                color: $c-green;
+                &:hover{
+                    color: lighten($c-green, 15%);
+                }
+            }
+        }
+        
+    }
+    
+}
+
+.main-header{
+    
+    position: relative;
+    min-height: 100vh;
+    background: $c-green;
+    
+    &-box{
+        $box-h: 110px;
+        $border-c: $c-green;
+        $border-w: 10px;
+        
+        position: absolute;
+        color: $c-green;
+        max-width: 550px;
+        left: 0;
+        right: 0;
+        top: 40%;
+        margin: auto;
+        background: yellow;
+        text-align: center;
+        padding: 20px 0;
+        height: $box-h;
+        h1{
+            font-size: 3em;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        
+        h3{
+            font-size: 2em;
+            font-weight: $f-light;
+        }
+        
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            height: $box-h / 2;
+            width: $box-h / 2;
+        }
+        
+        &::before{
+            left: 0;
+            top: 0;
+            border-left: $border-w solid $border-c;
+            border-top: $border-w solid $border-c;
+        }
+        
+        &::after{
+            right: 0;
+            bottom: 0;
+            border-right: $border-w solid $border-c;
+            border-bottom: $border-w solid $border-c;
+        }
+        
+    }
+ 
+    > a.icon{
+        transition: all .2s;
+        $s: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        margin: auto;
+        width: $s;
+        height: $s;
+        background: rgba(white, .5);
+        border-radius: 100%;
+        text-align: center;
+        i{
+            color: $c-green;
+            line-height: $s;
+            font-size: 22px;
+        }
+        &:hover{
+            background: yellow;
+        }
+    }
+}
+
+.row-w{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.section{
+    padding: 50px 0;
+    
+    > h2{
+        font-size: 2em;
+        color: #336600;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        text-decoration: underline;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 50px;
+            margin: auto;
+            height: 5px;
+            background: #eee;
+        }
+    }
+    
+    &-boxes{
+        display: flex;
+        
+        article{
+            flex: 1;
+            text-align: center;
+            padding: 30px;
+            
+            h3{
+                margin: 10px 0 5px;
+                font-size: 1.3em;
+            }
+            
+            p{
+                font-size: 2em;
+                opacity: .8;
+            }
+            
+            a{
+                font-weight: $f-bold;
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+            
+        }
+        
+    }
+    
+}
+
+footer{
+  padding: 30px;
+  text-align:center;
+  background:yellow;
+  a{
+    color:$c-green;
+  }
+}

@@ -1,0 +1,35 @@
+nav{
+    height: 40px;
+    background-color: $bojaPozadine;
+    font-family: $font;
+
+    ul{
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        li{
+            line-height: 40px;
+            list-style-type: none;
+            padding: 0 20px;
+
+            &:hover{ 
+                background-color: yellow;
+                border-left: 2px solid blue;
+            }
+            
+            a{
+                text-transform: uppercase;
+                font-size: $slovaNav;
+                text-decoration: none;
+                color: blue;
+            }
+        }
+    }
+}

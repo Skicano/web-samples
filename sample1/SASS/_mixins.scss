@@ -1,0 +1,9 @@
+@mixin rounded($sirina, $zaobljenost, $style: solid) {
+    border-width: $sirina;
+    border-radius: $zaobljenost;
+    border-style: $style;
+}
+
+@mixin dimenzije($var1, $var2) {
+    width: $var1 / $var2 * 100%; 
+}
